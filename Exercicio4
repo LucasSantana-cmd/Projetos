@@ -1,0 +1,77 @@
+// Importa a biblioteca JOptionPane para criar caixas de diálogo
+import javax.swing.JOptionPane;
+
+public class Projeto16 {
+
+    public static void main(String[] args) {
+        
+        // Declara variáveis para armazenar os números digitados
+        double num1, num2, resultado = 0;
+        
+        // Declara variável para armazenar a opção escolhida
+        int opcao;
+
+        // Pede o primeiro número ao usuário (entrada em forma de texto)
+        String entrada1 = JOptionPane.showInputDialog("Digite o primeiro número:");
+        
+        // Converte o valor digitado (String) para número (double)
+        num1 = Double.parseDouble(entrada1);
+
+        // Pede o segundo número ao usuário
+        String entrada2 = JOptionPane.showInputDialog("Digite o segundo número:");
+        
+        // Converte o valor digitado para número
+        num2 = Double.parseDouble(entrada2);
+
+        // Mostra as opções de operação para o usuário
+        String menu = "Escolha uma operação:\n"
+                    + "1 - Adição\n"
+                    + "2 - Subtração\n"
+                    + "3 - Multiplicação\n"
+                    + "4 - Divisão";
+
+        // Mostra o menu e captura a opção escolhida
+        String entradaOpcao = JOptionPane.showInputDialog(menu);
+        
+        // Converte a opção para inteiro
+        opcao = Integer.parseInt(entradaOpcao);
+
+        // Estrutura para verificar qual operação foi escolhida
+        switch(opcao) {
+            
+            case 1:
+                // Soma os dois números
+                resultado = num1 + num2;
+                break;
+
+            case 2:
+                // Subtrai o segundo número do primeiro
+                resultado = num1 - num2;
+                break;
+
+            case 3:
+                // Multiplica os dois números
+                resultado = num1 * num2;
+                break;
+
+            case 4:
+                // Verifica se o segundo número é zero (evita divisão por zero)
+                if (num2 != 0) {
+                    resultado = num1 / num2;
+                } else {
+                    // Mostra erro se tentar dividir por zero
+                    JOptionPane.showMessageDialog(null, "Erro: divisão por zero!");
+                    return; // Encerra o programa
+                }
+                break;
+
+            default:
+                // Caso o usuário digite uma opção inválida
+                JOptionPane.showMessageDialog(null, "Opção inválida!");
+                return; // Encerra o programa
+        }
+
+        // Mostra o resultado final da operação
+        JOptionPane.showMessageDialog(null, "Resultado: " + resultado);
+    }
+}
