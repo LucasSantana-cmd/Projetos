@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top left, rgba(255, 112, 67, 0.22), transparent 26%),
+                linear-gradient(180deg, #fff3e0 0%, #f8f9fa 50%, #ffffff 100%);
+    color: #212529;
+}
+
+.hero-header {
+    background: radial-gradient(circle at top center, rgba(255, 112, 67, 0.95), rgba(255, 202, 40, 0.85));
+    box-shadow: 0 0 2rem rgba(255, 112, 67, 0.25);
+}
+
+main {
+    flex: 1;
+    padding-bottom: 2.5rem;
+    margin-top: -3.8rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.98);
+    border: none;
+    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.08);
+}
+
+.list-group-item {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding: 1rem 1.1rem;
+}
+
+.list-group-item:last-child {
+    margin-bottom: 0;
+}
+
+.todo-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.todo-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: normal;
+    font-weight: 500;
+}
+
+#feedback {
+    min-height: 1.5rem;
+}
+
+.btn-primary {
+    background: #ff6f00;
+    border-color: #ff6f00;
+    box-shadow: 0 0.75rem 1.75rem rgba(255, 111, 0, 0.22);
+}
+
+.btn-primary:hover {
+    background: #e65100;
+    border-color: #e65100;
+}
+
+footer {
+    background: #ff6f00;
+    color: #ffffff;
+}
+
+@media (max-width: 575.98px) {
+    .list-group-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .todo-controls {
+        justify-content: flex-end;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu App de Tarefas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PYbKl3DomwbHs6x3mVBrgf6K0kRfB3VX5R0oL2jdIQN8G1E5PRqC+XZxVdE1P7wS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="hero-header text-white py-5 mb-5">
+        <div class="container text-center">
+            <h1 class="display-6 fw-bold mb-2">Minha Lista de Tarefas</h1>
+        
+            <p class="text-light opacity-75 mb-0 small">As tarefas ficam salvas no navegador e aparecem ao atualizar.</p>
+        </div>
+    </header>
+    <main class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8">
+                <div class="card shadow-lg border-0 rounded-4">
+                    <div class="card-body p-4 p-sm-5">
+                        <form id="todo-form" class="row g-3 align-items-end">
+                            <div class="col-sm-8">
+                                <label for="todo-input" class="form-label">Nova tarefa</label>
+                                <input id="todo-input" type="text" class="form-control form-control-lg" placeholder="Comece com letra maiúscula" autocomplete="off">
+                            </div>
+                            <div class="col-sm-4 d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">Adicionar</button>
+                            </div>
+                        </form>
+                        <div id="feedback" class="form-text mt-2 text-danger" aria-live="polite"></div>
+                        <hr class="my-4">
+                        <div id="todo-list" class="list-group"></div>
+                        <p id="empty-message" class="text-muted mt-3 d-none">Adicione uma tarefa acima.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-QFzW3+kYXc8e/jp9g8+DZ9Oy2U3gG2oWUSbxXr0fUj7FtG5uG3eQe7J+G0PvZg5i" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
